@@ -18,13 +18,3 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
-  strategy:
-    canary: 
-      maxSurge: "25%"
-      maxUnavailable: 0
-      steps:
-      - setWeight: 10
-      - pause:
-          duration: 1h 
-      - setWeight: 20
-      - pause: {}    
