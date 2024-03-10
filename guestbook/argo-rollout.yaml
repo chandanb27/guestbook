@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: nginx-rollout
+  name: guestbook-ui
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nginxtemplate:
+      app: guestbook-ui
     metadata:
       labels:
         app: guestbook-ui
